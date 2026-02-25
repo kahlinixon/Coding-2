@@ -1,14 +1,26 @@
-def discount():
-    price=int(input("how muc is the item"))
-    if price > 50 and price < 75:
-        sum = price * .15
-        total=price - sum
-        print(sum)
-        print("your new total is "+ str(total))
-    elif  price > 75
-    sum = price * .25
-        total = price - sum
-        print(sum)
-        print("your new total is "+ str(total))
-    else:
-        print("sorry,no discount")
+class KahliFirstBank:
+    def __init__(self, name, age, balance, accountNumber, phone):
+        self.name = name
+        self.age = age
+        self.balance = balance
+        self.accountNumber = accountNumber
+        self.phone = phone
+
+    def deposit(self, amount):
+        self.balance += amount
+        print("You have $" + str(self.balance))
+
+    def withdraw(self, amount):
+        self.balance -= amount
+        print("You have $" + str(self.balance))
+    
+    def checkBalance(self):
+        print("You have $" + str(self.balance))
+
+
+account_1 = KahliFirstBank('bob', 45, 300, 44, 'NA')
+account_2 = KahliFirstBank("Mena", 40, 800, 45, 'NA')
+
+account_1.checkBalance()
+account_1.deposit(100)
+account_1.withdraw(50)
